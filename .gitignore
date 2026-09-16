@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ChromaDB
+chroma_db/
+
+# Project backups
+frontend/backup/
+app_backup_*.py
+app_crag_complete.py
+app_crag_complete_fixed.py
+app_crag_complete_web_fixed.py
+app_rag_final_backup.py
+app_rag_v1.py
+app_rag_v2.py
+
+# Research paper PDFs
+data/papers/*.pdf
+
+# OS files
+.DS_Store
+Thumbs.db
