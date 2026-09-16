@@ -1,0 +1,2012 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="NEXUS — Intelligent Research Engine"
+    >
+
+    <meta
+        name="theme-color"
+        content="#08050d"
+    >
+
+    <title>NEXUS — Intelligent Research Engine</title>
+
+
+    <!-- =====================================================
+         FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         MAIN STYLESHEET
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         STARTUP SCREEN
+    ====================================================== -->
+
+    <div
+        id="startupScreen"
+        class="startup-screen"
+        aria-hidden="true"
+    >
+
+        <div class="startup-backdrop"></div>
+
+        <div class="startup-orb startup-orb-one"></div>
+
+        <div class="startup-orb startup-orb-two"></div>
+
+
+        <div
+            class="startup-content"
+            id="startupContent"
+        >
+
+            <div
+                class="startup-mark"
+                data-startup-element="mark"
+            >
+
+                <span class="startup-mark-dot"></span>
+
+                <span>
+                    RESEARCH INTELLIGENCE
+                </span>
+
+            </div>
+
+
+            <div
+                class="startup-logo"
+                data-startup-element="logo"
+            >
+                NEXUS
+            </div>
+
+
+            <div
+                class="startup-subtitle"
+                data-startup-element="subtitle"
+            >
+                INTELLIGENT RESEARCH ENGINE
+            </div>
+
+
+            <div
+                class="startup-line"
+                data-startup-element="line"
+            >
+
+                <span></span>
+
+            </div>
+
+
+            <div
+                class="startup-status"
+                id="startupStatus"
+                data-startup-element="status"
+            >
+                INITIALIZING RESEARCH ENGINE
+            </div>
+
+
+            <div
+                class="startup-status-meta"
+                data-startup-element="meta"
+            >
+
+                <span
+                    class="startup-status-dot"
+                    id="startupStatusDot"
+                ></span>
+
+                <span id="startupStatusMeta">
+                    LOCAL RESEARCH SYSTEM
+                </span>
+
+            </div>
+
+
+            <div
+                class="startup-progress"
+                id="startupProgress"
+                data-startup-element="progress"
+            >
+
+                <span></span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         GLOBAL BACKGROUND
+    ====================================================== -->
+
+    <div
+        class="background-system"
+        aria-hidden="true"
+    >
+
+        <div
+            class="background-ambient background-ambient-one"
+        ></div>
+
+
+        <div
+            class="background-ambient background-ambient-two"
+        ></div>
+
+
+        <div
+            class="background-ambient background-ambient-three"
+        ></div>
+
+
+        <div
+            class="background-grid"
+        ></div>
+
+
+        <div
+            class="background-vignette"
+        ></div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         BACKGROUND PARTICLES
+    ====================================================== -->
+
+    <div
+        class="background-particles"
+        id="backgroundParticles"
+        aria-hidden="true"
+    >
+
+        <span class="particle p1"></span>
+
+        <span class="particle p2"></span>
+
+        <span class="particle p3"></span>
+
+        <span class="particle p4"></span>
+
+        <span class="particle p5"></span>
+
+        <span class="particle p6"></span>
+
+        <span class="particle p7"></span>
+
+        <span class="particle p8"></span>
+
+        <span class="particle p9"></span>
+
+        <span class="particle p10"></span>
+
+        <span class="particle p11"></span>
+
+        <span class="particle p12"></span>
+
+        <span class="particle p13"></span>
+
+        <span class="particle p14"></span>
+
+        <span class="particle p15"></span>
+
+        <span class="particle p16"></span>
+
+        <span class="particle p17"></span>
+
+        <span class="particle p18"></span>
+
+        <span class="particle p19"></span>
+
+        <span class="particle p20"></span>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         SIDE NAVIGATION
+    ====================================================== -->
+
+    <aside
+        class="side-navigation"
+        id="sideNavigation"
+    >
+
+
+        <!-- HOME -->
+
+        <button
+            type="button"
+            class="nav-item active"
+            id="homeNav"
+            data-page="home"
+            aria-label="Home"
+            title="Home"
+        >
+
+            <span class="nav-icon">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+
+                    <path
+                        d="M3 10.5L12 3l9 7.5"
+                    />
+
+                    <path
+                        d="M5.5 9.5V21h13V9.5"
+                    />
+
+                    <path
+                        d="M9.5 21v-6h5v6"
+                    />
+
+                </svg>
+
+            </span>
+
+
+            <span class="nav-label">
+                Home
+            </span>
+
+        </button>
+
+
+
+        <!-- HISTORY -->
+
+        <button
+            type="button"
+            class="nav-item"
+            id="historyNav"
+            data-page="history"
+            aria-label="History"
+            title="History"
+        >
+
+            <span class="nav-icon">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+
+                    <path
+                        d="M3 12a9 9 0 1 0 3-6.7"
+                    />
+
+                    <path
+                        d="M3 4v5h5"
+                    />
+
+                    <path
+                        d="M12 7v5l3.5 2"
+                    />
+
+                </svg>
+
+            </span>
+
+
+            <span class="nav-label">
+                History
+            </span>
+
+        </button>
+
+
+
+        <!-- SAVED -->
+
+        <button
+            type="button"
+            class="nav-item"
+            id="savedNav"
+            data-page="saved"
+            aria-label="Saved"
+            title="Saved"
+        >
+
+            <span class="nav-icon">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+
+                    <path
+                        d="
+                            M6 4.5
+                            A2.5 2.5 0 0 1 8.5 2
+                            h7
+                            A2.5 2.5 0 0 1 18 4.5
+                            V21
+                            l-6-3.5
+                            L6 21
+                            V4.5Z
+                        "
+                    />
+
+                </svg>
+
+            </span>
+
+
+            <span class="nav-label">
+                Saved
+            </span>
+
+        </button>
+
+
+
+        <!-- SETTINGS -->
+
+        <button
+            type="button"
+            class="nav-item"
+            id="settingsNav"
+            data-page="settings"
+            aria-label="Settings"
+            title="Settings"
+        >
+
+            <span class="nav-icon">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+
+                    <path
+                        d="
+                            M12 15.5
+                            a3.5 3.5 0 1 0 0-7
+                            3.5 3.5 0 0 0 0 7Z
+                        "
+                    />
+
+                    <path
+                        d="
+                            M19.4 15
+                            a1.7 1.7 0 0 0 .3 1.9
+                            l.1.1
+                            -1.8 1.8
+                            -.1-.1
+                            a1.7 1.7 0 0 0-1.9-.3
+                            1.7 1.7 0 0 0-1 1.5
+                            v.2
+                            h-2.5
+                            v-.2
+                            a1.7 1.7 0 0 0-1-1.5
+                            1.7 1.7 0 0 0-1.9.3
+                            l-.1.1
+                            -1.8-1.8
+                            .1-.1
+                            A1.7 1.7 0 0 0 8 15
+                            a1.7 1.7 0 0 0-1.5-1
+                            H6.3
+                            v-2.5
+                            h.2
+                            A1.7 1.7 0 0 0 8 10
+                            a1.7 1.7 0 0 0-.3-1.9
+                            l-.1-.1
+                            1.8-1.8
+                            .1.1
+                            a1.7 1.7 0 0 0 1.9.3
+                            1.7 1.7 0 0 0 1-1.5
+                            v-.2
+                            h2.5
+                            v.2
+                            a1.7 1.7 0 0 0 1 1.5
+                            1.7 1.7 0 0 0 1.9-.3
+                            l.1-.1
+                            1.8 1.8
+                            -.1.1
+                            a1.7 1.7 0 0 0-.3 1.9
+                            1.7 1.7 0 0 0 1.5 1
+                            h.2
+                            V14
+                            h-.2
+                            a1.7 1.7 0 0 0-1.4 1Z
+                        "
+                    />
+
+                </svg>
+
+            </span>
+
+
+            <span class="nav-label">
+                Settings
+            </span>
+
+        </button>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN APPLICATION
+    ====================================================== -->
+
+    <main
+        class="app-shell"
+        id="app"
+    >
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="top-header">
+
+            <div class="brand">
+
+                <button
+                    type="button"
+                    class="brand-button"
+                    id="brandHomeButton"
+                    aria-label="Go to Home"
+                >
+
+                    <span class="brand-name">
+                        NEXUS
+                    </span>
+
+                    <span class="brand-subtitle">
+                        INTELLIGENT RESEARCH ENGINE
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <div class="system-status">
+
+                <span class="status-pulse"></span>
+
+                <span class="status-dot"></span>
+
+                <span>
+                    SYSTEM ONLINE
+                </span>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             HOME PAGE
+        ================================================== -->
+
+        <section
+            class="page-section active-page"
+            id="homePage"
+            data-page-content="home"
+        >
+
+
+            <!-- =================================================
+                 HERO
+            ================================================== -->
+
+            <section
+                class="hero"
+                id="hero"
+            >
+
+                <div
+                    class="hero-depth-layer"
+                ></div>
+
+
+                <div
+                    class="hero-glow"
+                ></div>
+
+
+                <div
+                    class="hero-glow-secondary"
+                ></div>
+
+
+                <div
+                    class="hero-grid"
+                ></div>
+
+
+                <div
+                    class="hero-sweep"
+                ></div>
+
+
+                <div
+                    class="hero-content"
+                >
+
+
+                    <div
+                        class="hero-label"
+                    >
+
+                        <span
+                            class="hero-dot"
+                        ></span>
+
+                        <span>
+                            RESEARCH INTELLIGENCE
+                        </span>
+
+                    </div>
+
+
+                    <h1
+                        class="hero-title"
+                        id="heroTitle"
+                    >
+
+                        <span
+                            class="hero-title-main"
+                        >
+                            ASK YOUR PAPERS.
+                        </span>
+
+
+                        <span
+                            class="gradient-text"
+                        >
+                            UNDERSTAND FASTER.
+                        </span>
+
+                    </h1>
+
+
+                    <p
+                        class="hero-description"
+                    >
+                        Ask questions about your research papers
+                        and receive grounded answers backed by
+                        relevant sources.
+                    </p>
+
+
+                    <div
+                        class="hero-capabilities"
+                    >
+
+                        <span>
+                            SEMANTIC RETRIEVAL
+                        </span>
+
+                        <span class="capability-divider">
+                            /
+                        </span>
+
+                        <span>
+                            GROUNDED ANSWERS
+                        </span>
+
+                        <span class="capability-divider">
+                            /
+                        </span>
+
+                        <span>
+                            SOURCE-AWARE AI
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="hero-line"
+                    >
+
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RESEARCH QUERY
+            ================================================== -->
+
+            <section
+                class="query-card"
+                id="queryCard"
+            >
+
+
+                <div
+                    class="section-heading"
+                >
+
+
+                    <div
+                        class="section-icon"
+                    >
+
+                        <svg
+                            class="thinking-icon"
+                            viewBox="0 0 48 48"
+                            aria-hidden="true"
+                        >
+
+                            <path
+                                d="
+                                    M25 8
+                                    C21 5 15 7 14 11
+                                    C10 10 7 13 7 17
+                                    C4 19 4 24 7 26
+                                    C5 30 8 34 12 34
+                                    C13 39 18 41 22 38
+                                    C25 41 30 39 31 35
+                                "
+                            />
+
+                            <path
+                                d="
+                                    M25 8
+                                    C29 6 34 8 34 12
+                                    C38 12 41 15 41 19
+                                    C44 22 43 26 40 28
+                                    C42 32 39 36 35 36
+                                    C34 40 29 41 26 38
+                                "
+                            />
+
+                            <path
+                                d="
+                                    M14 18
+                                    C17 18 18 16 18 14
+                                "
+                            />
+
+                            <path
+                                d="
+                                    M11 25
+                                    C14 24 16 25 17 28
+                                "
+                            />
+
+                            <path
+                                d="
+                                    M18 33
+                                    C19 30 21 29 24 30
+                                "
+                            />
+
+                            <path
+                                d="
+                                    M33 18
+                                    C30 18 29 16 29 14
+                                "
+                            />
+
+                            <path
+                                d="
+                                    M37 25
+                                    C34 24 32 25 31 28
+                                "
+                            />
+
+                            <path
+                                d="
+                                    M30 34
+                                    C29 31 27 30 24 30
+                                "
+                            />
+
+                            <path
+                                d="
+                                    M24 12
+                                    V37
+                                "
+                            />
+
+                        </svg>
+
+                    </div>
+
+
+                    <div
+                        class="section-heading-text"
+                    >
+
+                        <div
+                            class="section-label"
+                        >
+                            RESEARCH QUERY
+                        </div>
+
+
+                        <h2>
+                            What would you like to understand?
+                        </h2>
+
+
+                        <p>
+                            Ask a question about your research
+                            collection and receive a grounded response.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     COMPOSER
+                ================================================== -->
+
+                <div
+                    class="composer"
+                    id="composer"
+                >
+
+
+                    <!-- FILE PREVIEW -->
+
+                    <div
+                        class="composer-file-preview hidden"
+                        id="filePreview"
+                    >
+
+                        <div
+                            class="file-preview-info"
+                        >
+
+                            <span
+                                class="file-preview-icon"
+                                aria-hidden="true"
+                            >
+                                FILE
+                            </span>
+
+
+                            <div
+                                class="file-preview-text"
+                            >
+
+                                <span
+                                    class="file-preview-name"
+                                    id="filePreviewName"
+                                >
+                                    No file selected
+                                </span>
+
+
+                                <span
+                                    class="file-preview-size"
+                                    id="filePreviewSize"
+                                >
+                                    —
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="file-remove-button"
+                            id="removeFileButton"
+                            aria-label="Remove selected file"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- TEXT INPUT -->
+
+                    <div
+                        class="composer-main"
+                    >
+
+                        <textarea
+                            id="questionInput"
+                            class="question-input"
+                            name="question"
+                            rows="1"
+                            maxlength="12000"
+                            placeholder="Ask a research question..."
+                            aria-label="Research question"
+                            spellcheck="true"
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <!-- COMPOSER TOOLBAR -->
+
+                    <div
+                        class="composer-toolbar"
+                    >
+
+
+                        <div
+                            class="composer-tools"
+                        >
+
+                            <input
+                                type="file"
+                                id="fileInput"
+                                class="file-input-hidden"
+                                accept=".pdf,.doc,.docx,.txt,.png,.jpg,.jpeg,.webp"
+                            >
+
+
+                            <button
+                                type="button"
+                                class="composer-tool"
+                                id="attachmentButton"
+                                aria-label="Attach research document"
+                                title="Attach research document"
+                            >
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+
+                                    <path
+                                        d="
+                                            M21.4 11.6
+                                            L12.9 20.1
+                                            A6 6 0 0 1 4.4 11.6
+                                            L12.9 3.1
+                                            A4 4 0 0 1 18.6 8.8
+                                            L10.1 17.3
+                                            A2 2 0 1 1 7.3 14.5
+                                            L15.1 6.7
+                                        "
+                                    />
+
+                                </svg>
+
+
+                                <span>
+                                    Attach
+                                </span>
+
+                            </button>
+
+                        </div>
+
+
+
+                        <div
+                            class="composer-actions"
+                        >
+
+                            <span
+                                class="composer-hint"
+                                id="composerHint"
+                            >
+                                Enter to submit · Shift+Enter for newline
+                            </span>
+
+
+                            <button
+                                type="button"
+                                class="ask-button"
+                                id="askButton"
+                            >
+
+                                <span
+                                    class="ask-button-text"
+                                >
+                                    Ask NEXUS
+                                </span>
+
+
+                                <span
+                                    class="ask-button-icon"
+                                    aria-hidden="true"
+                                >
+
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                    >
+
+                                        <path
+                                            d="M5 12h13"
+                                        />
+
+                                        <path
+                                            d="m13 6 6 6-6 6"
+                                        />
+
+                                    </svg>
+
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- QUERY FOOTER -->
+
+                <div
+                    class="query-footer"
+                >
+
+                    <span>
+                        GROUNDED RESEARCH ASSISTANCE
+                    </span>
+
+
+                    <span>
+                        LOCAL KNOWLEDGE WORKSPACE
+                    </span>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 LOADING
+            ================================================== -->
+
+            <section
+                class="loading-panel hidden"
+                id="loading"
+                aria-live="polite"
+                aria-busy="true"
+            >
+
+                <div
+                    class="loading-orbit"
+                    aria-hidden="true"
+                >
+
+                    <span></span>
+
+                    <span></span>
+
+                    <span></span>
+
+                </div>
+
+
+                <div
+                    class="loading-content"
+                >
+
+                    <div
+                        class="loading-label"
+                    >
+                        RESEARCH PIPELINE
+                    </div>
+
+
+                    <div
+                        class="loading-text"
+                        id="loadingText"
+                    >
+                        SEARCHING RESEARCH DOCUMENTS...
+                    </div>
+
+
+                    <div
+                        class="loading-description"
+                    >
+                        NEXUS is retrieving and evaluating relevant evidence.
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="loading-progress"
+                >
+
+                    <div
+                        class="loading-bar"
+                        id="loadingBar"
+                    ></div>
+
+                </div>
+
+
+                <div
+                    class="loading-meta"
+                >
+
+                    <span
+                        id="loadingStage"
+                    >
+                        RETRIEVAL
+                    </span>
+
+
+                    <span>
+                        PROCESSING
+                    </span>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RESULTS
+            ================================================== -->
+
+            <section
+                class="result-section hidden"
+                id="results"
+            >
+
+
+                <!-- RESULT HEADER -->
+
+                <div
+                    class="result-header"
+                >
+
+                    <div>
+
+                        <div
+                            class="section-label"
+                        >
+                            RESEARCH RESULT
+                        </div>
+
+
+                        <h2>
+                            Grounded Answer
+                        </h2>
+
+                    </div>
+
+
+                    <div
+                        class="result-actions"
+                    >
+
+                        <button
+                            type="button"
+                            class="result-action-button"
+                            id="saveResultButton"
+                        >
+                            Save
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="result-action-button"
+                            id="newQuestionButton"
+                        >
+                            New Question
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RESULT QUESTION -->
+
+                <div
+                    class="result-question"
+                    id="resultQuestion"
+                >
+
+                    <span
+                        class="result-question-label"
+                    >
+                        QUESTION
+                    </span>
+
+
+                    <p
+                        id="resultQuestionText"
+                    >
+                        —
+                    </p>
+
+                </div>
+
+
+
+                <!-- ANSWER CARD -->
+
+                <div
+                    class="answer-card"
+                >
+
+                    <div
+                        class="answer-card-header"
+                    >
+
+                        <div
+                            class="answer-card-title"
+                        >
+
+                            <span
+                                class="answer-status-dot"
+                            ></span>
+
+
+                            <span>
+                                NEXUS ANSWER
+                            </span>
+
+                        </div>
+
+
+                        <span
+                            class="answer-grounding-label"
+                        >
+                            GROUNDED
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="answer-content"
+                        id="answerContent"
+                    ></div>
+
+                </div>
+
+
+
+                <!-- SOURCES -->
+
+                <div
+                    class="sources-section"
+                >
+
+                    <div
+                        class="sources-header"
+                    >
+
+                        <div>
+
+                            <div
+                                class="section-label"
+                            >
+                                EVIDENCE
+                            </div>
+
+
+                            <h3>
+                                Relevant Sources
+                            </h3>
+
+                        </div>
+
+
+                        <span
+                            class="sources-count"
+                        >
+                            TOP 3
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="sources-list"
+                        id="sourcesList"
+                    ></div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+
+        <!-- =================================================
+             HISTORY PAGE
+        ================================================== -->
+
+        <section
+            class="page-section"
+            id="historyPage"
+            data-page-content="history"
+        >
+
+
+            <div
+                class="page-header"
+            >
+
+                <div
+                    class="page-eyebrow"
+                >
+                    ACTIVITY
+                </div>
+
+
+                <h1>
+                    RESEARCH HISTORY
+                </h1>
+
+
+                <p>
+                    Your previous research questions and grounded answers.
+                </p>
+
+            </div>
+
+
+            <div
+                class="history-container"
+                id="historyList"
+            ></div>
+
+
+            <div
+                class="empty-state"
+                id="historyEmpty"
+            >
+
+                <div
+                    class="empty-state-icon"
+                >
+                    HISTORY
+                </div>
+
+
+                <h3>
+                    No research history yet
+                </h3>
+
+
+                <p>
+                    Questions you ask through NEXUS will appear here.
+                </p>
+
+
+                <button
+                    type="button"
+                    class="secondary-button"
+                    id="historyHomeButton"
+                >
+                    Start Research
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SAVED PAGE
+        ================================================== -->
+
+        <section
+            class="page-section"
+            id="savedPage"
+            data-page-content="saved"
+        >
+
+
+            <div
+                class="page-header"
+            >
+
+                <div
+                    class="page-eyebrow"
+                >
+                    KNOWLEDGE
+                </div>
+
+
+                <h1>
+                    SAVED RESEARCH
+                </h1>
+
+
+                <p>
+                    Keep important answers available for later review.
+                </p>
+
+            </div>
+
+
+            <div
+                class="saved-container"
+                id="savedList"
+            ></div>
+
+
+            <div
+                class="empty-state"
+                id="savedEmpty"
+            >
+
+                <div
+                    class="empty-state-icon"
+                >
+                    SAVED
+                </div>
+
+
+                <h3>
+                    Nothing saved yet
+                </h3>
+
+
+                <p>
+                    Save useful research answers to build your
+                    personal reference space.
+                </p>
+
+
+                <button
+                    type="button"
+                    class="secondary-button"
+                    id="savedHomeButton"
+                >
+                    Start Research
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SETTINGS PAGE
+        ================================================== -->
+
+        <section
+            class="page-section"
+            id="settingsPage"
+            data-page-content="settings"
+        >
+
+
+            <div
+                class="page-header"
+            >
+
+                <div
+                    class="page-eyebrow"
+                >
+                    SYSTEM
+                </div>
+
+
+                <h1>
+                    SETTINGS
+                </h1>
+
+
+                <p>
+                    Configure the NEXUS research workspace.
+                </p>
+
+            </div>
+
+
+            <div
+                class="settings-container"
+            >
+
+
+                <!-- =========================================
+                     THEME
+                ========================================== -->
+
+                <div
+                    class="settings-card theme-settings-card"
+                    id="themeSetting"
+                >
+
+                    <div
+                        class="settings-card-left"
+                    >
+
+                        <div
+                            class="settings-icon"
+                        >
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+
+                                <path
+                                    d="
+                                        M12 3
+                                        a9 9 0 1 0 9 9
+                                        c0-1.1-.9-2-2-2
+                                        h-2.5
+                                        A3.5 3.5 0 0 1 13 6.5
+                                        V4
+                                        c0-.6-.4-1-1-1Z
+                                    "
+                                />
+
+                                <circle
+                                    cx="8"
+                                    cy="12"
+                                    r="1"
+                                />
+
+                                <circle
+                                    cx="12"
+                                    cy="17"
+                                    r="1"
+                                />
+
+                                <circle
+                                    cx="16"
+                                    cy="7"
+                                    r="1"
+                                />
+
+                            </svg>
+
+                        </div>
+
+
+                        <div>
+
+                            <div
+                                class="settings-title"
+                            >
+                                Theme
+                            </div>
+
+
+                            <div
+                                class="settings-description"
+                            >
+                                Choose the appearance of NEXUS.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="theme-switcher"
+                    >
+
+                        <button
+                            type="button"
+                            class="theme-option active"
+                            id="darkTheme"
+                            data-theme="dark"
+                            aria-pressed="true"
+                        >
+                            Dark
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="theme-option"
+                            id="lightTheme"
+                            data-theme="light"
+                            aria-pressed="false"
+                        >
+                            Light
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     RESEARCH INTERFACE
+                ========================================== -->
+
+                <div
+                    class="settings-card settings-action-card"
+                    id="interfaceSetting"
+                    data-setting="interface"
+                >
+
+                    <div
+                        class="settings-card-left"
+                    >
+
+                        <div
+                            class="settings-icon"
+                        >
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+
+                                <path
+                                    d="M4 5h16v14H4z"
+                                />
+
+                                <path
+                                    d="M8 9h8"
+                                />
+
+                                <path
+                                    d="M8 13h5"
+                                />
+
+                            </svg>
+
+                        </div>
+
+
+                        <div>
+
+                            <div
+                                class="settings-title"
+                            >
+                                Research Interface
+                            </div>
+
+
+                            <div
+                                class="settings-description"
+                            >
+                                NEXUS keeps your research workspace
+                                focused and distraction free.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="settings-control"
+                    >
+
+                        <button
+                            type="button"
+                            class="settings-action-button"
+                            id="interfaceToggle"
+                            aria-pressed="false"
+                        >
+                            Focus Mode
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     DOCUMENT SUPPORT
+                ========================================== -->
+
+                <div
+                    class="settings-card settings-action-card"
+                    id="documentSetting"
+                    data-setting="documents"
+                >
+
+                    <div
+                        class="settings-card-left"
+                    >
+
+                        <div
+                            class="settings-icon"
+                        >
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+
+                                <path
+                                    d="
+                                        M21.4 11.6
+                                        L12.9 20.1
+                                        A6 6 0 0 1 4.4 11.6
+                                        L12.9 3.1
+                                        A4 4 0 0 1 18.6 8.8
+                                        L10.1 17.3
+                                        A2 2 0 1 1 7.3 14.5
+                                        L15.1 6.7
+                                    "
+                                />
+
+                            </svg>
+
+                        </div>
+
+
+                        <div>
+
+                            <div
+                                class="settings-title"
+                            >
+                                Document Support
+                            </div>
+
+
+                            <div
+                                class="settings-description"
+                            >
+                                Upload research papers, PDFs,
+                                documents and supported images.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="settings-control"
+                    >
+
+                        <button
+                            type="button"
+                            class="settings-action-button"
+                            id="documentSupportButton"
+                        >
+                            Open Uploads
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     ABOUT NEXUS
+                ========================================== -->
+
+                <div
+                    class="settings-card settings-action-card"
+                    id="aboutSetting"
+                    data-setting="about"
+                >
+
+                    <div
+                        class="settings-card-left"
+                    >
+
+                        <div
+                            class="settings-icon"
+                        >
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+
+                                <circle
+                                    cx="12"
+                                    cy="12"
+                                    r="9"
+                                />
+
+                                <path
+                                    d="M12 11v5"
+                                />
+
+                                <circle
+                                    cx="12"
+                                    cy="8"
+                                    r=".7"
+                                    fill="currentColor"
+                                    stroke="none"
+                                />
+
+                            </svg>
+
+                        </div>
+
+
+                        <div>
+
+                            <div
+                                class="settings-title"
+                            >
+                                About NEXUS
+                            </div>
+
+
+                            <div
+                                class="settings-description"
+                            >
+                                Intelligent research assistance
+                                powered by grounded retrieval.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="settings-control"
+                    >
+
+                        <button
+                            type="button"
+                            class="settings-action-button"
+                            id="aboutButton"
+                        >
+                            About NEXUS
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ABOUT MODAL
+        ================================================== -->
+
+        <div
+            class="nexus-modal hidden"
+            id="aboutModal"
+            aria-hidden="true"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="aboutModalTitle"
+        >
+
+            <div
+                class="nexus-modal-backdrop"
+                data-close-about
+            ></div>
+
+
+            <div
+                class="nexus-modal-card"
+            >
+
+                <button
+                    type="button"
+                    class="nexus-modal-close"
+                    id="closeAboutModal"
+                    aria-label="Close About NEXUS"
+                >
+                    ×
+                </button>
+
+
+                <div
+                    class="section-label"
+                >
+                    SYSTEM INFORMATION
+                </div>
+
+
+                <h2
+                    id="aboutModalTitle"
+                >
+                    NEXUS
+                </h2>
+
+
+                <p
+                    class="nexus-modal-lead"
+                >
+                    Intelligent Research Engine
+                </p>
+
+
+                <p>
+                    NEXUS helps you ask questions against your
+                    research collection and receive grounded answers
+                    with supporting source information.
+                </p>
+
+
+                <div
+                    class="about-metrics"
+                >
+
+                    <div>
+
+                        <span>
+                            RETRIEVAL
+                        </span>
+
+                        <strong>
+                            HYBRID
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            ANSWERING
+                        </span>
+
+                        <strong>
+                            GROUNDED
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            INTERFACE
+                        </span>
+
+                        <strong>
+                            LOCAL
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             TOAST
+        ================================================== -->
+
+        <div
+            class="toast"
+            id="toast"
+            role="status"
+            aria-live="polite"
+        >
+
+            <span
+                class="toast-dot"
+            ></span>
+
+
+            <span
+                id="toastMessage"
+            >
+                Ready
+            </span>
+
+        </div>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer
+            class="app-footer"
+        >
+
+            <span>
+                NEXUS
+            </span>
+
+
+            <span
+                class="footer-separator"
+            >
+                /
+            </span>
+
+
+            <span>
+                INTELLIGENT RESEARCH ENGINE
+            </span>
+
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         APPLICATION JAVASCRIPT
+    ====================================================== -->
+
+    <script
+        src="app.js"
+        defer
+    ></script>
+
+
+</body>
+
+</html>
