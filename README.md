@@ -1,6 +1,6 @@
-# NEXUS — Intelligent Research Engine
+NEXUS — Intelligent Research Engine
 
-### Ask your papers. Understand faster.
+ASK YOUR PAPERS. UNDERSTAND FASTER.
 
 NEXUS is an AI-powered research paper question-answering system built to make it easier to understand and work with multiple research papers.
 
@@ -8,9 +8,7 @@ Instead of manually searching through long documents for every question, NEXUS r
 
 The project combines Retrieval-Augmented Generation (RAG), semantic search, keyword-based retrieval, document reranking, and Corrective RAG (CRAG) to improve both answer quality and retrieval reliability.
 
----
-
-## About the Project
+About the Project**
 
 Research papers often contain a large amount of information spread across many pages. Finding one specific concept, explanation, or result can take considerable time.
 
@@ -20,9 +18,7 @@ A user can simply ask a question in natural language. The system searches the in
 
 Along with the answer, NEXUS also shows the relevant paper information and page references so that the user can verify the source.
 
----
-
-## What NEXUS Does
+What NEXUS Does**
 
 The system follows a complete retrieval and generation workflow:
 
@@ -32,150 +28,204 @@ When the retrieved research-paper evidence is sufficient, the answer is generate
 
 If the evidence is not sufficient, NEXUS uses a corrective retrieval process to search for additional information from the web.
 
----
+Key Features**
 
-## Key Features
+Natural-language question answering
 
-- Natural-language question answering
-- Retrieval-Augmented Generation (RAG)
-- Research paper indexing with ChromaDB
-- Semantic vector search
-- BM25 keyword retrieval
-- Hybrid retrieval
-- Cross-encoder reranking
-- Top-3 relevant source retrieval
-- Paper and page-level source information
-- Local answer generation using Gemma3
-- Ollama-based LLM integration
-- Corrective RAG (CRAG)
-- Web-search fallback when paper evidence is insufficient
-- Search history and saved responses
-- Custom web interface
-- Light and dark interface support
-- Focus Mode for distraction-free reading
+Retrieval-Augmented Generation (RAG)
 
----
+Research paper indexing with ChromaDB
 
-## How the System Works
+Semantic vector search
+
+BM25 keyword retrieval
+
+Hybrid retrieval
+
+Cross-encoder reranking
+
+Top-3 relevant source retrieval
+
+Paper and page-level source information
+
+Local answer generation using Gemma3
+
+Ollama-based LLM integration
+
+Corrective RAG (CRAG)
+
+Web-search fallback when paper evidence is insufficient
+
+Search history and saved responses
+
+Custom web interface
+
+Light and dark interface support
+
+Focus Mode for distraction-free reading
+
+How the System Works**
 
 NEXUS uses several stages to process a question.
 
-### 1. Research Paper Processing
+1. Research Paper Processing**
 
 The research papers are loaded and divided into smaller text chunks.
 
 This makes it possible to search specific sections instead of processing an entire paper for every question.
 
-### 2. Embedding Generation
+2. Embedding Generation**
 
 The document chunks are converted into vector representations using an embedding model.
 
 The primary embedding model used in the system is:
 
-`BAAI/bge-small-en-v1.5`
+BAAI/bge-small-en-v1.5
 
 These vectors are stored in ChromaDB.
 
-### 3. Document Retrieval
+3. Document Retrieval**
 
 When a user asks a question, NEXUS retrieves relevant chunks using two approaches:
 
-- Dense semantic retrieval
-- BM25 keyword retrieval
+Dense semantic retrieval
+
+BM25 keyword retrieval
 
 Semantic retrieval helps identify content with similar meaning, while BM25 helps match important terms from the question.
 
-### 4. Reranking
+4. Reranking**
 
 The retrieved candidates are passed through a cross-encoder reranker:
 
-`cross-encoder/ms-marco-MiniLM-L-6-v2`
+cross-encoder/ms-marco-MiniLM-L-6-v2
 
 The reranker evaluates the relevance between the question and the retrieved content and helps select the most useful passages.
 
-### 5. Evidence Evaluation
+5. Evidence Evaluation**
 
 Before generating the final answer, NEXUS checks whether the retrieved research-paper evidence is sufficient.
 
 The system can classify the evidence as:
 
-- GOOD
-- WEAK
+GOOD
 
-### 6. Answer Generation
+WEAK
+
+6. Answer Generation**
 
 If the evidence is sufficient, the retrieved paper content is provided to Gemma3 through Ollama.
 
 The model then generates an answer based on the retrieved context.
 
-### 7. Corrective RAG
+7. Corrective RAG**
 
 If the evidence is considered weak, NEXUS activates its Corrective RAG workflow.
 
 Additional information is retrieved from the web and used along with the available paper evidence before generating the final response.
 
----
+System Architecture**
 
-## System Architecture
 
-```text
-                    User Question
-                         |
-                         v
-                 Query Processing
-                         |
-              +----------+----------+
-              |                     |
-              v                     v
-       Dense Retrieval          BM25 Retrieval
-              |                     |
-              +----------+----------+
-                         |
-                         v
-                Candidate Documents
-                         |
-                         v
-                 Cross-Encoder
-                   Reranking
-                         |
-                         v
-                    Top-3 Chunks
-                         |
-                         v
-                 Evidence Evaluation
-                    /           \
-                   /             \
-                GOOD             WEAK
-                 |                 |
-                 v                 v
-             Paper RAG       Web Correction
-                 |                 |
-                 +--------+--------+
-                          |
-                          v
-                       Gemma3
-                          |
-                          v
-                    Final Answer
-                          |
-                          v
-              Paper / Page / Score
+                    User Question
+
+                         |
+
+                         v
+
+                 Query Processing
+
+                         |
+
+              +----------+----------+
+
+              |                     |
+
+              v                     v
+
+       Dense Retrieval          BM25 Retrieval
+
+              |                     |
+
+              +----------+----------+
+
+                         |
+
+                         v
+
+                Candidate Documents
+
+                         |
+
+                         v
+
+                 Cross-Encoder
+
+                   Reranking
+
+                         |
+
+                         v
+
+                    Top-3 Chunks
+
+                         |
+
+                         v
+
+                 Evidence Evaluation
+
+                    /           \\
+
+                   /             \\
+
+                GOOD             WEAK
+
+                 |                 |
+
+                 v                 v
+
+             Paper RAG       Web Correction
+
+                 |                 |
+
+                 +--------+--------+
+
+                          |
+
+                          v
+
+                       Gemma3
+
+                          |
+
+                          v
+
+                    Final Answer
+
+                          |
+
+                          v
+
+              Paper / Page / Score
 
 Embedding Experiment
 
 As part of the project, more than one embedding model was experimented with to understand how different models affect retrieval.
 
 BGE
+
 BAAI/bge-small-en-v1.5
 
 This is the primary embedding model used in the production RAG pipeline.
 
 MiniLM
+
 sentence-transformers/all-MiniLM-L6-v2
 
 A separate ChromaDB collection was used for the MiniLM experiment:
 
-research_papers_minilm
+research\_papers\_minilm
 
 The same set of questions was used to compare the retrieved results from the two embedding models.
 
@@ -204,123 +254,197 @@ One of the main extensions implemented in NEXUS is Corrective RAG.
 The idea is simple:
 
 Question
-   |
-   v
+
+   |
+
+   v
+
 Research Paper Retrieval
-   |
-   v
+
+   |
+
+   v
+
 Evidence Evaluation
-   |
-   +---- GOOD ----> Paper RAG ----> Answer
-   |
-   +---- WEAK ----> Web Search ---> Corrective Retrieval
-                              |
-                              v
-                           Gemma3
-                              |
-                              v
-                           Answer
+
+   |
+
+   +---- GOOD ----> Paper RAG ----> Answer
+
+   |
+
+   +---- WEAK ----> Web Search ---> Corrective Retrieval
+
+                              |
+
+                              v
+
+                           Gemma3
+
+                              |
+
+                              v
+
+                           Answer
 
 This allows the system to handle questions where the available research-paper collection does not contain enough useful evidence.
 
 The CRAG workflow was tested using both:
 
-Paper evidence sufficient → PAPER_RAG
-Paper evidence insufficient → CRAG_WEB_CORRECTION
+Paper evidence sufficient → PAPER\_RAG
 
+Paper evidence insufficient → CRAG\_WEB\_CORRECTION
 
 Technology Stack
-| Technology    | Purpose                      |
-| ------------- | ---------------------------- |
-| Python        | Backend development          |
-| FastAPI       | API development              |
-| LangChain     | Retrieval and RAG components |
-| ChromaDB      | Vector database              |
-| Hugging Face  | Embedding models             |
-| BGE           | Primary embedding model      |
-| MiniLM        | Embedding experiment         |
-| BM25          | Keyword retrieval            |
-| Cross-Encoder | Document reranking           |
-| Ollama        | Local LLM runtime            |
-| Gemma3        | Answer generation            |
-| HTML          | Frontend structure           |
-| CSS           | Frontend styling             |
-| JavaScript    | Frontend functionality       |
-| Wikipedia API | Corrective retrieval         |
-| DuckDuckGo    | Web-search fallback          |
-| Bing          | Web-search fallback          |
 
+| Technology    | Purpose                      |
+
+| ------------- | ---------------------------- |
+
+| Python        | Backend development          |
+
+| FastAPI       | API development              |
+
+| LangChain     | Retrieval and RAG components |
+
+| ChromaDB      | Vector database              |
+
+| Hugging Face  | Embedding models             |
+
+| BGE           | Primary embedding model      |
+
+| MiniLM        | Embedding experiment         |
+
+| BM25          | Keyword retrieval            |
+
+| Cross-Encoder | Document reranking           |
+
+| Ollama        | Local LLM runtime            |
+
+| Gemma3        | Answer generation            |
+
+| HTML          | Frontend structure           |
+
+| CSS           | Frontend styling             |
+
+| JavaScript    | Frontend functionality       |
+
+| Wikipedia API | Corrective retrieval         |
+
+| DuckDuckGo    | Web-search fallback          |
+
+| Bing          | Web-search fallback          |
 
 Project Structure
 
 Research Paper Answer Bot/
+
 │
+
 ├── app.py
+
 │
-├── chroma_db/
-│   └── ChromaDB vector database
+
+├── chroma\_db/
+
+│   └── ChromaDB vector database
+
 │
+
 ├── data/
-│   └── Research papers
+
+│   └── Research papers
+
 │
+
 ├── frontend/
-│   ├── index.html
-│   ├── style.css
-│   ├── app.js
-│   │
-│   └── fonts/
-│       └── Aquire-BW0ox.otf
+
+│   ├── index.html
+
+│   ├── style.css
+
+│   ├── app.js
+
+│   │
+
+│   └── fonts/
+
+│       └── Aquire-BW0ox.otf
+
 │
+
 ├── notebooks/
-│   └── Embedding experiments
+
+│   └── Embedding experiments
+
 │
+
 ├── outputs/
-│   └── Evaluation outputs
+
+│   └── Evaluation outputs
+
 │
+
 └── README.md
 
 Running the Project
+
 Backend
 
 Open a terminal and move to the project folder:
+
 cd "C:\Users\ASUS\Downloads\Research Paper Answer Bot"
 
 Start the FastAPI backend:
+
 python app.py
 
 The backend runs at:
-http://127.0.0.1:8000
+
+http\://127.0.0.1:8000
 
 Ollama
 
 NEXUS uses Gemma3 through Ollama.
 
 Make sure Ollama is installed and the model is available:
+
 ollama pull gemma3
+
 Ollama runs locally and is accessed by the backend.
 
 Frontend
 
 Open another terminal:
+
 cd "C:\Users\ASUS\Downloads\Research Paper Answer Bot\frontend"
+
 Start the frontend server:
+
 python -m http.server 5500
 
 Then open:
-http://127.0.0.1:5500
 
+http\://127.0.0.1:5500
 
 API Endpoints
+
 Health Check
+
 GET /
+
 Used to check whether the backend is running.
 
 Standard RAG
+
 POST /ask
+
 Handles research-paper question answering using the main RAG pipeline.
 
 Corrective RAG
+
 POST /ask-crag
+
 Runs the complete RAG + evidence evaluation + corrective retrieval workflow.
 
 Example Questions
@@ -347,7 +471,6 @@ Why does the Transformer use self-attention instead of recurrence?
 
 How does GPT-3 perform tasks without gradient updates?
 
-
 Evaluation
 
 The system was tested using 10 questions covering different research papers.
@@ -355,26 +478,40 @@ The system was tested using 10 questions covering different research papers.
 The evaluation included papers related to:
 
 BERT
+
 GPT-3
+
 Retrieval-Augmented Generation
+
 RETRO
+
 Transformer
 
 The responses were reviewed based on:
 
 Relevance
+
 Accuracy
+
 Groundedness
+
 Retrieval quality
+
 Source information
 
 Evaluation Summary
-| Result  | Count |
+
+| Result  | Count |
+
 | ------- | ----: |
-| PASS    |     9 |
-| PARTIAL |     1 |
-| FAIL    |     0 |
-| Total   |    10 |
+
+| PASS    |     9 |
+
+| PARTIAL |     1 |
+
+| FAIL    |     0 |
+
+| Total   |    10 |
 
 The system successfully provided substantially useful answers for all 10 questions.
 
@@ -406,22 +543,32 @@ Evaluation Size
 
 The current evaluation uses 10 questions. A larger test set would provide a broader view of system performance.
 
-
 Future Improvements
 
 Some areas that could be explored in future versions include:
 
 Larger research-paper collections
+
 Better query rewriting
+
 More advanced retrieval strategies
+
 Automated evaluation using DeepEval
+
 LLM-as-a-judge evaluation
+
 Improved conversational memory
+
 Research-paper comparison
+
 Citation verification
+
 Paper summarization
+
 User-specific paper collections
+
 Improved web retrieval
+
 Cloud deployment
 
 Why I Built NEXUS
@@ -433,32 +580,45 @@ The project gave me an opportunity to work with different parts of a modern GenA
 More importantly, it helped me understand that building a useful RAG system is not only about connecting an LLM to a vector database. Retrieval quality, evidence grounding, evaluation, and failure handling are equally important.
 
 Project Status
-Research Paper Processing       Completed
-ChromaDB Vector Storage         Completed
-BGE Embeddings                  Completed
-MiniLM Experiment               Completed
-Dense Retrieval                 Completed
-BM25 Retrieval                  Completed
-Cross-Encoder Reranking         Completed
-Top-3 Source Retrieval          Completed
-Gemma3 + Ollama                 Completed
-FastAPI Backend                 Completed
-Custom Frontend                 Completed
-Corrective RAG                  Completed
-CRAG Web Correction             Tested
-10-Question Evaluation          Completed
-Failure Case Documentation      Completed
+
+Research Paper Processing       Completed
+
+ChromaDB Vector Storage         Completed
+
+BGE Embeddings                  Completed
+
+MiniLM Experiment               Completed
+
+Dense Retrieval                 Completed
+
+BM25 Retrieval                  Completed
+
+Cross-Encoder Reranking         Completed
+
+Top-3 Source Retrieval          Completed
+
+Gemma3 + Ollama                 Completed
+
+FastAPI Backend                 Completed
+
+Custom Frontend                 Completed
+
+Corrective RAG                  Completed
+
+CRAG Web Correction             Tested
+
+10-Question Evaluation          Completed
+
+Failure Case Documentation      Completed
 
 Author
 
 Harish D
 
 B.Sc. Computer Science
-Data Science & Visualization
 
+Data Science & Visualization
 
 NEXUS
 
 ASK YOUR PAPERS. UNDERSTAND FASTER.
-
-
